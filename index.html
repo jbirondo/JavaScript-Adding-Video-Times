@@ -195,7 +195,12 @@
 
     let secondsLeft = seconds
     let hours = Math.floor(secondsLeft / 3600)
+
     secondsLeft = secondsLeft % 3600
+    let mins = Math.floor(secondsLeft / 60)
+
+    secondsLeft = secondsLeft % 60
+
 </script>
 </body>
 </html>
