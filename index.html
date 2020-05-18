@@ -188,7 +188,9 @@
     .map(timeCode => {
       const [min, sec] = timeCode.split(":").map(parseFloat)
         return (min * 60) + sec
-        console.log(min, sec)
+    })
+    .reduce((total, seconds) => {
+      return total + seconds
     })
   console.log(seconds)
 </script>
