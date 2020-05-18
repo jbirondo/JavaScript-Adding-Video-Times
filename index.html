@@ -185,6 +185,11 @@
   const timeNodes = [...document.querySelectorAll('[data-time]')]
   const seconds = timeNodes
     .map(node => node.dataset.time)
+    .map(timeCode => {
+      const [min, sec] = timeCode.split(":").map(parseFloat)
+        return (min * 60) + sec
+        console.log(min, sec)
+    })
   console.log(seconds)
 </script>
 </body>
